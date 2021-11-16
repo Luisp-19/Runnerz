@@ -5,37 +5,36 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.pm.runnerz.data.database.RunningDatabase
-import com.pm.runnerz.data.entities.Produto
+import com.pm.runnerz.data.entities.Running
 import com.pm.runnerz.data.repository.RunningRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class RunningViewModel(application: Application) : AndroidViewModel(application) {
-    val readAllProdutos: LiveData<List<Produto>>
+    val readAllRunnings: LiveData<List<Running>>
     private val repository: RunningRepository
 
     init {
         val runningDao = RunningDatabase.getDatabase(application).runningDao()
         repository = RunningRepository(runningDao)
-        readAllProdutos = repository.readAllProdutos
-
+        readAllRunnings = repository.readAllRunnings
     }
 
-    fun addProduto(produto: Produto) {
+    fun addRunning(running: Running) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.addProduto(produto)
+            repository.addRunning(running)
         }
     }
 
-    fun updateProduto(produto: Produto) {
+    fun updateRunning(running: Running) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.updateProduto(produto)
+            repository.updateRunning(running)
         }
     }
 
-    fun deleteProduto(produto: Produto) {
+    fun deleteRunning(running: Running) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteProduto(produto)
+            repository.deleteRunning(running)
         }
     }
 }

@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.pm.runnerz.data.dao.RunningDao
-import com.pm.runnerz.data.entities.Produto
+import com.pm.runnerz.data.entities.Running
 
-@Database(entities = [Produto::class], version = 1, exportSchema = false)
+@Database(entities = [Running::class], version = 1, exportSchema = false)
 abstract class RunningDatabase : RoomDatabase() {
 
     abstract fun runningDao(): RunningDao
@@ -32,5 +32,4 @@ abstract class RunningDatabase : RoomDatabase() {
             }
         }
     }
-
 }

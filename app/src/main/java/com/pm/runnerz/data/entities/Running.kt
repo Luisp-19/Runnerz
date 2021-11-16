@@ -6,9 +6,11 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-@Entity(tableName = "Produto")
-class Produto(
+@Entity(tableName = "Corrida")
+class Running(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val name: String
+    val name: String,
+    //val duration: String
+    //val kms: String
 ) : Parcelable

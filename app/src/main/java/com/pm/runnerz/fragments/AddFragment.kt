@@ -1,4 +1,4 @@
-package com.pm.runnerz
+package com.pm.runnerz.fragments
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,11 +7,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.pm.runnerz.data.entities.Produto
+import com.pm.runnerz.R
+import com.pm.runnerz.data.entities.Running
 import com.pm.runnerz.data.viewmodel.RunningViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 
-class Add : Fragment() {
+class AddFragment : Fragment() {
 
     private lateinit var mProductViewModel: RunningViewModel
 
@@ -37,13 +38,13 @@ class Add : Fragment() {
         //hideKeyboard()
 
         if (item.itemId == R.id.menu_addrun) {
-            addProduto()
+            addCorrida()
         }
 
         return super.onOptionsItemSelected(item)
     }
 
-    private fun addProduto() {
+    private fun addCorrida() {
         if (!isValid()) {
             return Toast.makeText(
                 requireContext(),
@@ -52,9 +53,9 @@ class Add : Fragment() {
             ).show()
         }
 
-        val product = Produto(0, productName.text.toString())
+        val running = Running(0, productName.text.toString())
 
-        mProductViewModel.addProduto(product)
+        mProductViewModel.addRunning(running)
 
         Toast.makeText(
             requireContext(),

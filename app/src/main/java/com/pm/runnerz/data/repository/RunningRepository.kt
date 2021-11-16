@@ -2,20 +2,20 @@ package com.pm.runnerz.data.repository
 
 import androidx.lifecycle.LiveData
 import com.pm.runnerz.data.dao.RunningDao
-import com.pm.runnerz.data.entities.Produto
+import com.pm.runnerz.data.entities.Running
 
 class RunningRepository(private val runningDao: RunningDao) {
-    val readAllProdutos: LiveData<List<Produto>> = runningDao.readAllProdutos()
+    val readAllRunnings: LiveData<List<Running>> = runningDao.readAllRunnings()
 
-    suspend fun addProduto(produto: Produto) {
-        runningDao.addProduto(produto)
+    suspend fun addRunning(running: Running) {
+        runningDao.addRunning(running)
     }
 
-    suspend fun updateProduto(produto: Produto) {
-        runningDao.updateProduto(produto)
+    suspend fun updateRunning(running: Running) {
+        runningDao.updateRunning(running)
     }
 
-    suspend fun deleteProduto(produto: Produto) {
-        runningDao.deleteProduto(produto)
+    suspend fun deleteRunning(running: Running) {
+        runningDao.deleteRunning(running)
     }
 }
