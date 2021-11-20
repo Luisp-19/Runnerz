@@ -14,5 +14,5 @@
         android:icon="@drawable/ic_baseline_delete_24"
         android:iconTint="@color/white"
         android:title="Delete"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
 </menu>

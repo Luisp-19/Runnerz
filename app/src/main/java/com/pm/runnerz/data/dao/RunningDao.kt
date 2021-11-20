@@ -12,9 +12,9 @@ interface RunningDao {
     @Update
     fun updateRunning(running: Running)
 
-    @Query("SELECT * FROM corrida ORDER BY id ASC") //ASC QUANDO ADICIONAR O DELETE
-    fun readAllRunnings(): LiveData<List<Running>>
-
     @Delete
     fun deleteRunning(running: Running)
+
+    @Query("SELECT * FROM corrida ORDER BY id ASC") //ASC QUANDO ADICIONAR O DELETE
+    fun readAllRunnings(): LiveData<List<Running>>
 }

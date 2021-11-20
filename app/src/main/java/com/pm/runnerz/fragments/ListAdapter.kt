@@ -10,13 +10,15 @@ import com.pm.runnerz.R
 import com.pm.runnerz.data.entities.Running
 import kotlinx.android.synthetic.main.recyclerview.view.*
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
-    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {}
+class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {}
 
     private var runningList = emptyList<Running>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.recyclerview, parent, false))
+        return MyViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.recyclerview, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: ListAdapter.MyViewHolder, position: Int) {
@@ -29,10 +31,9 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         * DATA
         * */
 
-        if(position%2 == 0){
+        if (position % 2 == 0) {
             holder.itemView.rowLayout.setBackgroundColor(Color.parseColor("#d6d4e0"))
-        }
-        else {
+        } else {
             holder.itemView.rowLayout.setBackgroundColor(Color.parseColor("#b8a9c9"))
         }
 
@@ -46,7 +47,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         return runningList.size
     }
 
-    fun setData(runnings: List<Running>){
+    fun setData(runnings: List<Running>) {
         this.runningList = runnings
         notifyDataSetChanged()
     }

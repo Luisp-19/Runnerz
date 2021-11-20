@@ -9,7 +9,7 @@
         android:id="@+id/listFragment"
         android:name="com.pm.runnerz.fragments.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_add"
             app:destination="@id/addFragment" />
@@ -21,7 +21,7 @@
         android:id="@+id/addFragment"
         android:name="com.pm.runnerz.fragments.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" >
+        tools:layout="@layout/fragment_add">
         <action
             android:id="@+id/action_add2_to_listFragment"
             app:destination="@id/listFragment" />
@@ -30,7 +30,7 @@
         android:id="@+id/updateFragment"
         android:name="com.pm.runnerz.fragments.UpdateFragment"
         android:label="fragment_update"
-        tools:layout="@layout/fragment_update" >
+        tools:layout="@layout/fragment_update">
         <action
             android:id="@+id/action_updateFragment_to_listFragment"
             app:destination="@id/listFragment" />

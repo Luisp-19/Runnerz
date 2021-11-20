@@ -10,7 +10,7 @@ import kotlinx.android.parcel.Parcelize
 class Running(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val name: String,
-    //val duration: String
-    //val kms: String
+    val name: String
+    /*val duration: String,
+    val kms: String*/
 ) : Parcelable

@@ -2,35 +2,33 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rowLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="24sp"
-    android:id="@+id/rowLayout">
+    android:padding="24sp">
 
     <LinearLayout
         android:id="@+id/main_layout_running_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="left"
-        android:padding="0dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="0dp">
 
         <TextView
             android:id="@+id/lst_runningId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
             android:padding="5dp"
-            android:text="ID"/>
+            android:text="ID"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/lst_runningName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
             android:padding="5dp"
-            android:text="Name"/>
-
-
+            android:text="Name"
+            android:textSize="25dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
