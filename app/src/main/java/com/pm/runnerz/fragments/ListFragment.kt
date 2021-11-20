@@ -37,7 +37,7 @@ class ListFragment : Fragment() {
         })
 
         view.btnAddProductFromList.setOnClickListener() {
-            findNavController().navigate(R.id.action_listFragment_to_add2)
+            findNavController().navigate(R.id.action_listFragment_to_add)
         }
 
         return view

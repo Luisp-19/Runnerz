@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="product">Produto</string>
     <string name="empty_run">Nada a adicionar</string>
-    <string name="succes_add_run">Guardado</string>
+    <string name="succes_add_run">Guardado!</string>
+    <string name="add_run">Adicionar Detalhes da Corrida</string>
+    <string name="update_run">Modificar Detalhes da Corrida</string>
+    <string name="update_run_success">Detalhes da Corrida Modificados!</string>
 </resources>

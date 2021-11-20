@@ -8,4 +8,11 @@
         android:iconTint="@android:color/white"
         android:title="Save"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_deleterun"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:iconTint="@color/white"
+        android:title="Delete"
+        app:showAsAction="ifRoom"/>
 </menu>

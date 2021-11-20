@@ -31,7 +31,7 @@ class AddFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_addrun, menu)
+        inflater.inflate(R.menu.menu_running, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -53,7 +53,7 @@ class AddFragment : Fragment() {
             ).show()
         }
 
-        val running = Running(0, productName.text.toString())
+        val running = Running(0, addRunningName.text.toString())
 
         mProductViewModel.addRunning(running)
 
@@ -67,6 +67,6 @@ class AddFragment : Fragment() {
     }
 
     private fun isValid(): Boolean {
-        return !TextUtils.isEmpty(productName.text.toString())
+        return !TextUtils.isEmpty(addRunningName.text.toString())
     }
 }

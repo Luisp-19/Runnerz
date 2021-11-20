@@ -4,12 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.246875" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.28125" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.246875" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout-land/fragment_add.xml" value="0.32760141093474426" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/activity_main.xml" value="0.21875" />
-        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_add.xml" value="0.18819655521783182" />
-        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_list.xml" value="0.11220871327254306" />
-        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/recyclerview.xml" value="0.1" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/delete_run.xml" value="0.26510416666666664" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_add.xml" value="0.1" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_list.xml" value="0.2520833333333333" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_update.xml" value="0.26510416666666664" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/recyclerview.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/menu/menu_addrun.xml" value="0.25" />
       </map>
     </option>

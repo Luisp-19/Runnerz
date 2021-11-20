@@ -23,6 +23,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = runningList[position]
         holder.itemView.lst_runningId.text = currentItem.id.toString()
         holder.itemView.lst_runningName.text = currentItem.name
+        /*
+        * DURATION
+        * KMS
+        * DATA
+        * */
 
         if(position%2 == 0){
             holder.itemView.rowLayout.setBackgroundColor(Color.parseColor("#d6d4e0"))
@@ -31,10 +36,10 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             holder.itemView.rowLayout.setBackgroundColor(Color.parseColor("#b8a9c9"))
         }
 
-        /*holder.itemView.rowLayout.setOnClickListener {
+        holder.itemView.rowLayout.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
-        }*/
+        }
     }
 
     override fun getItemCount(): Int {
