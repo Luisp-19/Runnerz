@@ -52,11 +52,22 @@ class AddFragment : Fragment() {
                 getString(R.string.empty_run),
                 Toast.LENGTH_LONG
             ).show()
-        }
+        } /*else{
+            Toast.makeText(requireContext(),
+                getString(R.string.running_check),
+            Toast.LENGTH_LONG
+            ).show()
+        }*/
 
-        val running = Running(0, addRunningName.text.toString())
+        val addRunning = Running(
+            0,
+            addRunningName.text.toString(),
+            addRunningData.text.toString(),
+            addRunningDuration.text.toString(),
+            addRunningKms.text.toString()
+        )
 
-        mProductViewModel.addRunning(running)
+        mProductViewModel.addRunning(addRunning)
 
         Toast.makeText(
             requireContext(),
@@ -64,10 +75,13 @@ class AddFragment : Fragment() {
             Toast.LENGTH_LONG
         ).show()
 
-        findNavController().navigate(R.id.action_add2_to_listFragment)
+        findNavController().navigate(R.id.action_add_to_listFragment)
     }
 
     private fun isValid(): Boolean {
-        return !TextUtils.isEmpty(addRunningName.text.toString())
+        return !(TextUtils.isEmpty(addRunningName.text.toString()) &&
+                TextUtils.isEmpty(addRunningData.text.toString()) &&
+                TextUtils.isEmpty(addRunningDuration.text.toString()) &&
+                TextUtils.isEmpty(addRunningKms.text.toString()))
     }
 }

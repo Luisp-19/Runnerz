@@ -35,6 +35,9 @@ class UpdateFragment : Fragment() {
         mProductViewModel = ViewModelProvider(this).get(RunningViewModel::class.java)
 
         view.updateRunningName.setText(args.currenRun.name)
+        view.updateRunningData.setText(args.currenRun.data)
+        view.updateRunningDuration.setText(args.currenRun.duration)
+        view.updateRunningKms.setText(args.currenRun.kms)
 
         setHasOptionsMenu(true)
 
@@ -66,10 +69,22 @@ class UpdateFragment : Fragment() {
                 getString(R.string.empty_run),
                 Toast.LENGTH_LONG
             ).show()
-        }
-        val running = Running(args.currenRun.id, updateRunningName.text.toString())
+        } /*else{
+            Toast.makeText(requireContext(),
+                getString(R.string.running_check),
+                Toast.LENGTH_LONG
+            ).show()
+        }*/
 
-        mProductViewModel.updateRunning(running)
+        val updateRunning = Running(
+            args.currenRun.id,
+            updateRunningName.text.toString(),
+            updateRunningData.text.toString(),
+            updateRunningDuration.text.toString(),
+            updateRunningKms.text.toString()
+        )
+
+        mProductViewModel.updateRunning(updateRunning)
 
         Toast.makeText(
             requireContext(),

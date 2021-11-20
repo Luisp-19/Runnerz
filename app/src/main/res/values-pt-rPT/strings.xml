@@ -2,12 +2,20 @@
 <resources>
     <string name="empty_run">Nada a adicionar</string>
     <string name="succes_add_run">Guardado!</string>
-    <string name="add_run">Adicionar Detalhes da Corrida</string>
-    <string name="update_run">Modificar Detalhes da Corrida</string>
-    <string name="update_run_success">Detalhes da Corrida Modificados!</string>
+    <string name="add_run">Adicionar Sessão de Corrida</string>
+    <string name="update_run">Atualizar Sessão de Corrida</string>
+    <string name="update_run_success">Sessão de Corrida Atualizada!</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
-    <string name="delete_run_succes">Detalhes de Corrida Eliminados!</string>
+    <string name="delete_run_succes">Sessão de Corrida Eliminada!</string>
     <string name="delete">Apagar</string>
-    <string name="question_run_delete">De certeza que quqeres apagar?</string>
+    <string name="question_run_delete">De certeza que queres apagar?</string>
+    <string name="running_name">Local</string>
+    <string name="running_duration">Duração</string>
+    <string name="running_kms">Kms</string>
+    <string name="running_data">Data</string>
+    <string name="running_check">Preencha todos os campos</string>
+    <string name="fragment_list_run">Runnerz</string>
+    <string name="fragment_add_run">Adicionar Sessão de Corrida</string>
+    <string name="fragment_update_run">Atualizar Sessão de Corrida</string>
 </resources>

@@ -25,11 +25,9 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = runningList[position]
         holder.itemView.lst_runningId.text = currentItem.id.toString()
         holder.itemView.lst_runningName.text = currentItem.name
-        /*
-        * DURATION
-        * KMS
-        * DATA
-        * */
+        holder.itemView.lst_runningData.text = currentItem.data
+        holder.itemView.lst_runningDuration.text = currentItem.duration
+        holder.itemView.lst_runningKms.text = currentItem.kms
 
         if (position % 2 == 0) {
             holder.itemView.rowLayout.setBackgroundColor(Color.parseColor("#d6d4e0"))

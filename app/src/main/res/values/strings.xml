@@ -12,4 +12,12 @@
     <string name="delete_run_succes">Running Session Deleted!</string>
     <string name="delete">Delete</string>
     <string name="question_run_delete">Are you sure you want to Delete?</string>
+    <string name="running_name">Place</string>
+    <string name="running_duration">Duration</string>
+    <string name="running_kms">Kms</string>
+    <string name="running_data">Data</string>
+    <string name="running_check">Please fill out all the fields below</string>
+    <string name="fragment_list_run">Last Runs</string>
+    <string name="fragment_add_run">Add Run</string>
+    <string name="fragment_update_run">Change Run</string>
 </resources>
