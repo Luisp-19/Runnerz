@@ -7,4 +7,9 @@
     <string name="add_run">Add Running Session</string>
     <string name="update_run">Update Running Session</string>
     <string name="update_run_success">Running Session Updated!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete_run_succes">Running Session Deleted!</string>
+    <string name="delete">Delete</string>
+    <string name="question_run_delete">Are you sure you want to Delete?</string>
 </resources>

@@ -5,4 +5,9 @@
     <string name="add_run">Adicionar Detalhes da Corrida</string>
     <string name="update_run">Modificar Detalhes da Corrida</string>
     <string name="update_run_success">Detalhes da Corrida Modificados!</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="delete_run_succes">Detalhes de Corrida Eliminados!</string>
+    <string name="delete">Apagar</string>
+    <string name="question_run_delete">De certeza que quqeres apagar?</string>
 </resources>

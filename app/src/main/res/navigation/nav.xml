@@ -32,7 +32,7 @@
         android:label="fragment_update"
         tools:layout="@layout/fragment_update" >
         <action
-            android:id="@+id/action_updateFragment3_to_listFragment"
+            android:id="@+id/action_updateFragment_to_listFragment"
             app:destination="@id/listFragment" />
         <argument
             android:name="currenRun"

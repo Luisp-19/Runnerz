@@ -16,6 +16,7 @@ import com.pm.runnerz.data.viewmodel.RunningViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
+import java.nio.file.Files.delete
 
 class UpdateFragment : Fragment() {
 
@@ -50,9 +51,9 @@ class UpdateFragment : Fragment() {
             updateRunning()
         }
 
-        /*if (item.itemId == R.id.menu_deleterun) {
-            deleteProduct()
-        }*/
+        if (item.itemId == R.id.menu_deleterun) {
+            deleteRunning()
+        }
 
         return super.onOptionsItemSelected(item)
     }
@@ -74,25 +75,25 @@ class UpdateFragment : Fragment() {
             getString(R.string.update_run_success),
             Toast.LENGTH_LONG
         ).show()
-        findNavController().navigate(R.id.action_updateFragment3_to_listFragment)
+        findNavController().navigate(R.id.action_updateFragment_to_listFragment)
     }
 
-    /*private fun deleteRunning() {
+    private fun deleteRunning() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton(getString(R.string.yes)) { _, _ ->
-            mProductViewModel.deleteProduct(args.currentProduct)
+            mProductViewModel.deleteRunning(args.currenRun)
             Toast.makeText(
                 requireContext(),
-                getString(R.string.product_successfully_deleted),
+                getString(R.string.delete_run_succes),
                 Toast.LENGTH_SHORT
             ).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
         builder.setNegativeButton(getString(R.string.no)) { _, _ -> }
         builder.setTitle(getString(R.string.delete))
-        builder.setMessage(getString(R.string.question_delete))
+        builder.setMessage(getString(R.string.question_run_delete))
         builder.create().show()
-    }*/
+    }
 
     private fun isValid(): Boolean {
         return !TextUtils.isEmpty(updateRunningName.text.toString())
