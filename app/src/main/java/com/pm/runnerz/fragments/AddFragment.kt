@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.pm.runnerz.R
 import com.pm.runnerz.data.entities.Running
 import com.pm.runnerz.data.viewmodel.RunningViewModel
+import com.pm.runnerz.utils.Utils.Companion.hideKeyboard
 import kotlinx.android.synthetic.main.fragment_add.*
 
 class AddFragment : Fragment() {
@@ -35,7 +36,7 @@ class AddFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //hideKeyboard()
+        hideKeyboard()
 
         if (item.itemId == R.id.menu_addrun) {
             addCorrida()

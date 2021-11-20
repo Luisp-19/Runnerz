@@ -13,6 +13,7 @@ import androidx.navigation.fragment.navArgs
 import com.pm.runnerz.R
 import com.pm.runnerz.data.entities.Running
 import com.pm.runnerz.data.viewmodel.RunningViewModel
+import com.pm.runnerz.utils.Utils.Companion.hideKeyboard
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
@@ -45,7 +46,7 @@ class UpdateFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //hideKeyboard()
+        hideKeyboard()
 
         if (item.itemId == R.id.menu_addrun) {
             updateRunning()
