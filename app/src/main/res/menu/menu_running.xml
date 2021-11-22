@@ -4,14 +4,14 @@
 
     <item
         android:id="@+id/menu_addrun"
-        android:icon="@drawable/ic_baseline_save_24"
+        android:icon="@drawable/ic_save"
         android:iconTint="@android:color/white"
         android:title="Save"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_deleterun"
-        android:icon="@drawable/ic_baseline_delete_24"
+        android:icon="@drawable/ic_delete"
         android:iconTint="@color/white"
         android:title="Delete"
         app:showAsAction="ifRoom" />

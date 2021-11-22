@@ -15,41 +15,61 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="@string/add_run"
             android:textSize="25dp" />
 
         <EditText
             android:id="@+id/addRunningName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_place_icon"
+            android:drawablePadding="12dp"
             android:ems="10"
             android:hint="@string/running_name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
         <EditText
             android:id="@+id/addRunningData"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_calendar_icon"
+            android:drawablePadding="12dp"
             android:ems="10"
             android:hint="@string/running_data"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
         <EditText
             android:id="@+id/addRunningDuration"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_hourglass_icon"
+            android:drawablePadding="12dp"
             android:ems="10"
             android:hint="@string/running_duration"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
         <EditText
             android:id="@+id/addRunningKms"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_walk_icon"
+            android:drawablePadding="12dp"
             android:ems="10"
             android:hint="@string/running_kms"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
