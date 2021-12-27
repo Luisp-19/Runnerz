@@ -20,4 +20,9 @@
     <string name="fragment_list_run">Last Runs</string>
     <string name="fragment_add_run">Add Run</string>
     <string name="fragment_update_run">Change Run</string>
+    <string name="signin">Sign In</string>
+    <string name="session_expired">Session Expired</string>
+    <string name="session_expired_message">Session has been expired. Please Sign In again!</string>
+    <string name="error_something_went_wrong">Ups! Something went wrong. Please Try again!</string>
+    <string name="login" translatable="false">Login</string>
 </resources>

@@ -1,11 +1,8 @@
-package com.pm.runnerz.fragments
+package com.pm.runnerz.fragments.list
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,4 +39,22 @@ class ListFragment : Fragment() {
 
         return view
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_running, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (item.itemId == R.id.user_login) {
+            openlogin()
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    private  fun openlogin(){
+        findNavController().navigate(R.id.action_listFragment_to_loginFragment)
+    }
+
 }

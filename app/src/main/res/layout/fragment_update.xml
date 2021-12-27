@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.UpdateFragment">
+    tools:context=".fragments.update.UpdateFragment">
 
     <LinearLayout
         android:id="@+id/ll_main_layout_update_product"
@@ -36,6 +36,7 @@
             android:id="@+id/updateRunningData"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_calendar_icon"
             android:drawablePadding="12dp"
@@ -49,6 +50,7 @@
             android:id="@+id/updateRunningDuration"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_hourglass_icon"
             android:drawablePadding="12dp"
@@ -62,6 +64,7 @@
             android:id="@+id/updateRunningKms"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_walk_icon"
             android:drawablePadding="12dp"

@@ -1,4 +1,4 @@
-package com.pm.runnerz.fragments
+package com.pm.runnerz.fragments.list
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -15,13 +15,13 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var runningList = emptyList<Running>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.recyclerview, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: ListAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = runningList[position]
         holder.itemView.lst_runningId.text = currentItem.id.toString()
         holder.itemView.lst_runningName.text = currentItem.name

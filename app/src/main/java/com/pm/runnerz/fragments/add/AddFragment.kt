@@ -1,4 +1,4 @@
-package com.pm.runnerz.fragments
+package com.pm.runnerz.fragments.add
 
 import android.os.Bundle
 import android.text.TextUtils

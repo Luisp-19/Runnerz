@@ -1,7 +1,6 @@
-package com.pm.runnerz.fragments
+package com.pm.runnerz.fragments.update
 
 import android.app.AlertDialog
-import android.opengl.ETC1.isValid
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -14,10 +13,8 @@ import com.pm.runnerz.R
 import com.pm.runnerz.data.entities.Running
 import com.pm.runnerz.data.viewmodel.RunningViewModel
 import com.pm.runnerz.utils.Utils.Companion.hideKeyboard
-import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
-import java.nio.file.Files.delete
 
 class UpdateFragment : Fragment() {
 

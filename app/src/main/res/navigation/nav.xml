@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.pm.runnerz.fragments.ListFragment"
+        android:name="com.pm.runnerz.fragments.list.ListFragment"
         android:label="@string/fragment_list_run"
         tools:layout="@layout/fragment_list">
         <action
@@ -16,10 +16,13 @@
         <action
             android:id="@+id/action_listFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.pm.runnerz.fragments.AddFragment"
+        android:name="com.pm.runnerz.fragments.add.AddFragment"
         android:label="Add Runs"
         tools:layout="@layout/fragment_add">
         <action
@@ -28,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
-        android:name="com.pm.runnerz.fragments.UpdateFragment"
+        android:name="com.pm.runnerz.fragments.update.UpdateFragment"
         android:label="Change Run"
         tools:layout="@layout/fragment_update">
         <action
@@ -37,6 +40,15 @@
         <argument
             android:name="currenRun"
             app:argType="com.pm.runnerz.data.entities.Running" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pm.runnerz.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 
 </navigation>

@@ -18,4 +18,8 @@
     <string name="fragment_list_run">Runnerz</string>
     <string name="fragment_add_run">Adicionar Sessão de Corrida</string>
     <string name="fragment_update_run">Atualizar Sessão de Corrida</string>
+    <string name="signin">Iniciar Sessão</string>
+    <string name="session_expired">Sessão Expirada</string>
+    <string name="session_expired_message">A sessão expirou! Por favor inicie sessão.</string>
+    <string name="error_something_went_wrong">Ups! Algo não correu como planeado. Por favor tente novamente!</string>
 </resources>
