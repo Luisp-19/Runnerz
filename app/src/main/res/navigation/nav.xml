@@ -47,15 +47,15 @@
         android:label="@string/login"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_runListFragment"
             app:destination="@id/runListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/runListFragment"
-        android:name="com.pm.runnerz.fragments.runz_list.runListFragment"
+        android:name="com.pm.runnerz.fragments.runz_list.RunListFragment"
         android:label="@string/runs"
         tools:layout="@layout/fragment_run_list">
         <action

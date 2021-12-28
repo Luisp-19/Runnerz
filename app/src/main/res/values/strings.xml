@@ -29,4 +29,7 @@
     <string name="welcome">Welcome!</string>
     <string name="runs">Runs</string>
     <string name="wrong_username_password">Ups! Username or Password doesn\'t check out. Please try again.</string>
+    <string name="refresh" translatable="false">Refresh</string>
+    <string name="logout" translatable="false">Logout</string>
+    <string name="logout_question">Are you sure you want to logout?</string>
 </resources>

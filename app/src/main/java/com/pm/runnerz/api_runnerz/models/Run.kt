@@ -11,6 +11,5 @@ data class Run(
     val duration: String,
     val kms: String,
     val users_id: Int,
-    val created_at: String,
     val user_name: String
 ) : Parcelable

@@ -45,15 +45,17 @@
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout-land/fragment_update.xml" value="0.2239858906525573" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout-land/recyclerview.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/activity_main.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/custom_row_runs_list.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/delete_run.xml" value="0.26510416666666664" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_add.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_list.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_login.xml" value="0.33" />
-        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_run_list.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_run_list.xml" value="0.26268115942028986" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/fragment_update.xml" value="0.26510416666666664" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/progressbar.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/layout/recyclerview.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/menu/menu_addrun.xml" value="0.25" />
+        <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/menu/menu_list_run.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/menu/menu_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/menu/menu_running.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/luisp/Runnerz/app/src/main/res/menu/user_login.xml" value="0.38697916666666665" />
