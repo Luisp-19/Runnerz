@@ -21,6 +21,8 @@ class ListFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
+        setHasOptionsMenu(true)
+
         // Recyclerview
         val adapter = ListAdapter()
         val recyclerView = view.recyclerview
@@ -33,7 +35,7 @@ class ListFragment : Fragment() {
             adapter.setData(products)
         })
 
-        view.btnAddProductFromList.setOnClickListener() {
+        view.btnAddRunFromList.setOnClickListener() {
             findNavController().navigate(R.id.action_listFragment_to_add)
         }
 
@@ -41,19 +43,19 @@ class ListFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_running, menu)
+        inflater.inflate(R.menu.menu_login, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if (item.itemId == R.id.user_login) {
+        if (item.itemId == R.id.menu_login) {
             openlogin()
         }
 
         return super.onOptionsItemSelected(item)
     }
 
-    private  fun openlogin(){
+    private fun openlogin() {
         findNavController().navigate(R.id.action_listFragment_to_loginFragment)
     }
 

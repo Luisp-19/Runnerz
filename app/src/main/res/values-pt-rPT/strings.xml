@@ -22,4 +22,8 @@
     <string name="session_expired">Sessão Expirada</string>
     <string name="session_expired_message">A sessão expirou! Por favor inicie sessão.</string>
     <string name="error_something_went_wrong">Ups! Algo não correu como planeado. Por favor tente novamente!</string>
+    <string name="fill_user_password">Por favor preencha os campos \'Username\' e \'Password\'</string>
+    <string name="welcome">Bem-Vindo!</string>
+    <string name="runs">Corridas</string>
+    <string name="wrong_username_password">Ups! Username ou Password erradas. Por favor tente novamente.</string>
 </resources>

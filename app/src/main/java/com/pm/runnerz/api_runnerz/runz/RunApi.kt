@@ -36,5 +36,5 @@ interface RunApi {
     fun deleteRun(
         @Header("Authorization") token: String,
         @Field("id") id: Int
-    ): RunDao
+    ): Call<RunDao>
 }

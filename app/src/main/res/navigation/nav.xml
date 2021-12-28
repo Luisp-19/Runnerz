@@ -43,12 +43,24 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.pm.runnerz.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:name="com.pm.runnerz.fragments.login.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_runListFragment"
+            app:destination="@id/runListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/runListFragment"
+        android:name="com.pm.runnerz.fragments.runz_list.runListFragment"
+        android:label="@string/runs"
+        tools:layout="@layout/fragment_run_list">
+        <action
+            android:id="@+id/action_runListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
 </navigation>

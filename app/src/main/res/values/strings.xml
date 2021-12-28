@@ -25,4 +25,8 @@
     <string name="session_expired_message">Session has been expired. Please Sign In again!</string>
     <string name="error_something_went_wrong">Ups! Something went wrong. Please Try again!</string>
     <string name="login" translatable="false">Login</string>
+    <string name="fill_user_password">Please fill the camps Username and Password!</string>
+    <string name="welcome">Welcome!</string>
+    <string name="runs">Runs</string>
+    <string name="wrong_username_password">Ups! Username or Password doesn\'t check out. Please try again.</string>
 </resources>
