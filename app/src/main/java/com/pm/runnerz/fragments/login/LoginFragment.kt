@@ -45,11 +45,11 @@ class LoginFragment : Fragment() {
                 Toast.LENGTH_LONG
             ).show()
         } else {
-            signinRequest(view)
+            signinRun(view)
         }
     }
 
-    private fun signinRequest(view: View) {
+    private fun signinRun(view: View) {
         val request = ServiceBuilder.buildService(UsersApi::class.java)
         val call = request.signin(login_username.text.toString(), login_password.text.toString())
 

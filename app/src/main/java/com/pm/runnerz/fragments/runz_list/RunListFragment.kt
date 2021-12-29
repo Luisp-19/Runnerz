@@ -37,7 +37,7 @@ class RunListFragment : Fragment() {
         getAndSetData(view)
 
         view.BtnAddNewRunFromRunsList.setOnClickListener() {
-            //findNavController().navigate(R.id.action_reportsListFragment_to_addReportFragment)
+            findNavController().navigate(R.id.action_runListFragment_to_addRunFragment)
         }
 
         return view
@@ -66,7 +66,6 @@ class RunListFragment : Fragment() {
         view.llProgressBarList.bringToFront()
         view.llProgressBarList.visibility = View.VISIBLE
 
-
         val adapter = RunListAdapter(getUserIdInSession())
 
         val recyclerView = view.recyclerview_runs_list
@@ -82,8 +81,8 @@ class RunListFragment : Fragment() {
                 llProgressBarList.visibility = View.GONE
 
                 if (response.isSuccessful) {
-                    val reports: List<Run> = response.body()!!
-                    adapter.setData(reports)
+                    val runs: List<Run> = response.body()!!
+                    adapter.setData(runs)
                 } else {
                     if (response.code() == 401) {
                         unauthorized(navigatonHandlder = {

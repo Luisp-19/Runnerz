@@ -64,9 +64,8 @@ class RunListAdapter(userIdInSession: String?) :
         return runsList.size
     }
 
-    fun setData(reportsList: List<Run>) {
-        this.runsList = reportsList
+    fun setData(runsList: List<Run>) {
+        this.runsList = runsList
         notifyDataSetChanged()
     }
-
 }
