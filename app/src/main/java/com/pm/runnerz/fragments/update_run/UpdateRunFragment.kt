@@ -17,8 +17,16 @@ import com.pm.runnerz.utils.Utils.Companion.hideKeyboard
 import com.pm.runnerz.utils.Utils.Companion.somethingWentWrong
 import com.pm.runnerz.utils.Utils.Companion.unauthorized
 import kotlinx.android.synthetic.main.fragment_add_run.*
+import kotlinx.android.synthetic.main.fragment_add_run.addRunKms
 import kotlinx.android.synthetic.main.fragment_update.*
+import kotlinx.android.synthetic.main.fragment_update.updateRunningData
+import kotlinx.android.synthetic.main.fragment_update.updateRunningDuration
+import kotlinx.android.synthetic.main.fragment_update.updateRunningKms
+import kotlinx.android.synthetic.main.fragment_update.updateRunningName
 import kotlinx.android.synthetic.main.fragment_update.view.*
+import kotlinx.android.synthetic.main.fragment_update.view.updateRunningName
+import kotlinx.android.synthetic.main.fragment_update_run.*
+import kotlinx.android.synthetic.main.fragment_update_run.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,10 +44,10 @@ class UpdateRunFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-        view.updateRunningName.setText(args.currentRunAPI.name_corrida)
-        view.updateRunningData.setText(args.currentRunAPI.data_corrida)
-        view.updateRunningDuration.setText(args.currentRunAPI.duration_corrida)
-        view.updateRunningKms.setText(args.currentRunAPI.kms_corrida)
+        view.updateRunName.setText(args.currentRunAPI.name_corrida)
+        view.updateRunName.setText(args.currentRunAPI.data_corrida)
+        view.updateRunName.setText(args.currentRunAPI.duration_corrida)
+        view.updateRunName.setText(args.currentRunAPI.kms_corrida)
 
         return view
     }
@@ -63,10 +71,10 @@ class UpdateRunFragment : Fragment() {
     }
 
     private fun updateRun() {
-        if (TextUtils.isEmpty(updateRunningName.text.toString())
-            || TextUtils.isEmpty(updateRunningData.text.toString())
-            || TextUtils.isEmpty(updateRunningDuration.text.toString())
-            || TextUtils.isEmpty(updateRunningKms.text.toString())
+        if (TextUtils.isEmpty(updateRunName.text.toString())
+            || TextUtils.isEmpty(updateRunName.text.toString())
+            || TextUtils.isEmpty(updateRunName.text.toString())
+            || TextUtils.isEmpty(updateRunName.text.toString())
         ) {
             Toast.makeText(
                 requireContext(),
@@ -79,10 +87,10 @@ class UpdateRunFragment : Fragment() {
             val call = request.updateRun(
                 token = "Bearer ${getToken()}",
                 id = args.currentRunAPI.id,
-                name_corrida = addRunName.text.toString(),
-                data_corrida = addRunData.text.toString(),
-                duration_corrida = addRunDuration.text.toString(),
-                kms_corrida = addRunKms.text.toString()
+                name_corrida = updateRunName.text.toString(),
+                data_corrida = updateRunData.text.toString(),
+                duration_corrida = updateRunDuration.text.toString(),
+                kms_corrida = updateRunKms.text.toString()
             )
 
             call.enqueue(object : Callback<RunDto> {
@@ -94,7 +102,7 @@ class UpdateRunFragment : Fragment() {
                             Toast.makeText(
                                 requireContext(),
                                 getString(R.string.update_run_success),
-                                Toast.LENGTH_LONG
+                                Toast.LENGTH_SHORT
                             ).show()
                             findNavController().navigate(R.id.action_updateRunFragment_to_runListFragment)
                         } else {
@@ -104,7 +112,7 @@ class UpdateRunFragment : Fragment() {
                                         report.message, "string",
                                         context?.packageName
                                     )
-                                ), Toast.LENGTH_LONG
+                                ), Toast.LENGTH_SHORT
                             ).show()
                         }
                     } else {
@@ -154,7 +162,7 @@ class UpdateRunFragment : Fragment() {
                                         report.message, "string",
                                         context?.packageName
                                     )
-                                ), Toast.LENGTH_LONG
+                                ), Toast.LENGTH_SHORT
                             ).show()
                         }
 

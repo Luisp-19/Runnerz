@@ -58,7 +58,7 @@ class AddRunFragment : Fragment() {
             Toast.makeText(
                 requireContext(),
                 getString(R.string.running_check),
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             )
                 .show()
         } else {
@@ -86,7 +86,7 @@ class AddRunFragment : Fragment() {
                             Toast.makeText(
                                 requireContext(),
                                 getString(R.string.add_run),
-                                Toast.LENGTH_LONG
+                                Toast.LENGTH_SHORT
                             ).show()
                             findNavController().navigate(R.id.action_addRunFragment_to_runListFragment)
                         } else {
@@ -96,7 +96,7 @@ class AddRunFragment : Fragment() {
                                         run.message, "string",
                                         context?.packageName
                                     )
-                                ), Toast.LENGTH_LONG
+                                ), Toast.LENGTH_SHORT
                             ).show()
                         }
                     } else {

@@ -38,7 +38,9 @@ class LoginFragment : Fragment() {
     }
 
     private fun signin(view: View) {
-        if (TextUtils.isEmpty(login_username.text.toString()) || TextUtils.isEmpty(login_password.text.toString())) {
+        if (TextUtils.isEmpty(login_username.text.toString())
+            || TextUtils.isEmpty(login_password.text.toString())
+        ) {
             Toast.makeText(
                 requireContext(),
                 getString(R.string.fill_user_password),

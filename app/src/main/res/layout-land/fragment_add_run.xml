@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.update_run.UpdateRunFragment">
+    tools:context=".fragments.runz.add.AddRunFragment">
 
     <include
         android:id="@+id/llProgressBar"
@@ -11,7 +11,7 @@
         android:visibility="gone" />
 
     <LinearLayout
-        android:id="@+id/main_update_run"
+        android:id="@+id/main_add_run"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="left"
@@ -21,11 +21,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:text="@string/update_run"
+            android:text="@string/add_run"
             android:textSize="25dp" />
 
         <EditText
-            android:id="@+id/updateRunName"
+            android:id="@+id/addRunName"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/custom_input"
@@ -38,7 +38,7 @@
             android:paddingEnd="12dp" />
 
         <EditText
-            android:id="@+id/updateRunData"
+            android:id="@+id/addRunData"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="2dp"
@@ -52,7 +52,7 @@
             android:paddingEnd="12dp" />
 
         <EditText
-            android:id="@+id/updateRunDuration"
+            android:id="@+id/addRunDuration"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="2dp"
@@ -66,7 +66,7 @@
             android:paddingEnd="12dp" />
 
         <EditText
-            android:id="@+id/updateRunKms"
+            android:id="@+id/addRunKms"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="2dp"
