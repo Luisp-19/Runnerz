@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.update_run.UpdateRunFragment">
+
+    <include
+        android:id="@+id/llProgressBar"
+        layout="@layout/progressbar"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/main_update_run"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/update_run"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/updateRunName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_place_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/running_name"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <EditText
+            android:id="@+id/updateRunData"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_calendar_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/running_data"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <EditText
+            android:id="@+id/updateRunDuration"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_hourglass_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/running_duration"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <EditText
+            android:id="@+id/addRunKms"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_walk_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/running_kms"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
+

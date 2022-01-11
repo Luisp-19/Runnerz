@@ -27,4 +27,6 @@
     <string name="runs">Corridas</string>
     <string name="wrong_username_password">Ups! Username ou Password erradas. Por favor tente novamente.</string>
     <string name="logout_question">De certeza que pretende fazer logout?</string>
+    <string name="delete_run">Eliminar CPrroda</string>
+    <string name="only_edit_runz">Ups! Só podes mudar ou apagar</string>
 </resources>

@@ -32,4 +32,6 @@
     <string name="refresh" translatable="false">Refresh</string>
     <string name="logout" translatable="false">Logout</string>
     <string name="logout_question">Are you sure you want to logout?</string>
+    <string name="delete_run">Delete Run</string>
+    <string name="only_edit_runz">Ups! You can only update or delete</string>
 </resources>

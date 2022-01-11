@@ -46,18 +46,16 @@ class RunListAdapter(userIdInSession: String?) :
             holder.itemView.setBackgroundColor(Color.parseColor("#b8a9c9"))
         }
 
-        /*holder.itemView.layout_run_list.setOnClickListener {
+        holder.itemView.layout_run_list.setOnClickListener {
             if(_userIdInSession == currentItem.users_id.toString()){
                 val action =
-                    RunsListFragmentDirections.actionRunsListFragmentToUpdateReportFragment(
-                        currentItem
-                    )
+                    RunListFragmentDirections.actionRunListFragmentToUpdateRunFragment(currentItem)
                 holder.itemView.findNavController().navigate(action)
             }
             else {
-                Toast.makeText(_ctx,R.string.ony_edit_your_reports, Toast.LENGTH_LONG).show()
+                Toast.makeText(_ctx,R.string.only_edit_runz, Toast.LENGTH_LONG).show()
             }
-        }*/
+        }
     }
 
     override fun getItemCount(): Int {
