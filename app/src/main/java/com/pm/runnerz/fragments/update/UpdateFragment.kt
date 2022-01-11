@@ -31,10 +31,10 @@ class UpdateFragment : Fragment() {
 
         mProductViewModel = ViewModelProvider(this).get(RunningViewModel::class.java)
 
-        view.updateRunningName.setText(args.currenRun.name)
-        view.updateRunningData.setText(args.currenRun.data)
-        view.updateRunningDuration.setText(args.currenRun.duration)
-        view.updateRunningKms.setText(args.currenRun.kms)
+        view.updateRunningName.setText(args.currentRun.name)
+        view.updateRunningData.setText(args.currentRun.data)
+        view.updateRunningDuration.setText(args.currentRun.duration)
+        view.updateRunningKms.setText(args.currentRun.kms)
 
         setHasOptionsMenu(true)
 
@@ -74,7 +74,7 @@ class UpdateFragment : Fragment() {
         }*/
 
         val updateRunning = Running(
-            args.currenRun.id,
+            args.currentRun.id,
             updateRunningName.text.toString(),
             updateRunningData.text.toString(),
             updateRunningDuration.text.toString(),
@@ -94,7 +94,7 @@ class UpdateFragment : Fragment() {
     private fun deleteRunning() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton(getString(R.string.yes)) { _, _ ->
-            mProductViewModel.deleteRunning(args.currenRun)
+            mProductViewModel.deleteRunning(args.currentRun)
             Toast.makeText(
                 requireContext(),
                 getString(R.string.delete_run_succes),

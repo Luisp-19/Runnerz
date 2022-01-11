@@ -38,7 +38,7 @@
             android:id="@+id/action_updateFragment_to_listFragment"
             app:destination="@id/listFragment" />
         <argument
-            android:name="currenRun"
+            android:name="currentRun"
             app:argType="com.pm.runnerz.data.entities.Running" />
     </fragment>
     <fragment
@@ -72,7 +72,7 @@
         android:id="@+id/addRunFragment"
         android:name="com.pm.runnerz.fragments.runz.add.AddRunFragment"
         android:label="Add Run"
-        tools:layout="@layout/fragment_add_run" >
+        tools:layout="@layout/fragment_add_run">
         <action
             android:id="@+id/action_addRunFragment_to_runListFragment"
             app:destination="@id/runListFragment" />
@@ -84,14 +84,15 @@
         android:id="@+id/updateRunFragment"
         android:name="com.pm.runnerz.fragments.update_run.UpdateRunFragment"
         android:label="fragment_update_run"
-        tools:layout="@layout/fragment_update_run" >
+        tools:layout="@layout/fragment_update_run">
         <action
             android:id="@+id/action_updateRunFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_updateRunFragment_to_runListFragment"
             app:destination="@id/runListFragment" />
-        <argument android:name="currentRun"
+        <argument
+            android:name="currentRunAPI"
             app:argType="com.pm.runnerz.api_runnerz.models.Run" />
     </fragment>
 

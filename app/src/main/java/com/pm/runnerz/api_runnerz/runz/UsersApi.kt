@@ -1,6 +1,6 @@
 package com.pm.runnerz.api_runnerz.runz
 
-import com.pm.runnerz.api_runnerz.dao.UserDao
+import com.pm.runnerz.api_runnerz.dto.UserDto
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -13,5 +13,5 @@ interface UsersApi {
     fun signin(
         @Field("username") username: String,
         @Field("password") password: String
-    ): Call<UserDao>
+    ): Call<UserDto>
 }

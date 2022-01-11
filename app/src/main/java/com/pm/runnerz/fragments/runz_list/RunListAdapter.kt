@@ -47,13 +47,12 @@ class RunListAdapter(userIdInSession: String?) :
         }
 
         holder.itemView.layout_run_list.setOnClickListener {
-            if(_userIdInSession == currentItem.users_id.toString()){
+            if (_userIdInSession == currentItem.users_id.toString()) {
                 val action =
                     RunListFragmentDirections.actionRunListFragmentToUpdateRunFragment(currentItem)
                 holder.itemView.findNavController().navigate(action)
-            }
-            else {
-                Toast.makeText(_ctx,R.string.only_edit_runz, Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(_ctx, R.string.only_edit_runz, Toast.LENGTH_LONG).show()
             }
         }
     }

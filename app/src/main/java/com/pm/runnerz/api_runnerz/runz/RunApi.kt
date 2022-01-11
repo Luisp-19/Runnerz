@@ -1,14 +1,16 @@
 package com.pm.runnerz.api_runnerz.runz
 
-import com.pm.runnerz.api_runnerz.dao.RunDao
+import com.pm.runnerz.api_runnerz.dto.RunDto
 import com.pm.runnerz.api_runnerz.models.Run
 import retrofit2.Call
 import retrofit2.http.*
 
 interface RunApi {
     @GET("runnerz/read")
-    fun getRunz(@Header("Authorization")
-                token: String): Call<List<Run>>
+    fun getRunz(
+        @Header("Authorization")
+        token: String
+    ): Call<List<Run>>
 
     @FormUrlEncoded
     @POST("runnerz/create")
@@ -19,7 +21,7 @@ interface RunApi {
         @Field("data_corrida") data_corrida: String,
         @Field("duration_corrida") duration_corrida: String,
         @Field("kms_corrida") kms_corrida: String
-    ): Call<RunDao>
+    ): Call<RunDto>
 
     @FormUrlEncoded
     @POST("runnerz/update")
@@ -30,12 +32,12 @@ interface RunApi {
         @Field("data_corrida") data_corrida: String,
         @Field("duration_corrida") duration_corrida: String,
         @Field("kms_corrida") kms_corrida: String
-    ): Call<RunDao>
+    ): Call<RunDto>
 
     @FormUrlEncoded
     @POST("runnerz/delete")
     fun deleteRun(
         @Header("Authorization") token: String,
         @Field("id") id: Int
-    ): Call<RunDao>
+    ): Call<RunDto>
 }

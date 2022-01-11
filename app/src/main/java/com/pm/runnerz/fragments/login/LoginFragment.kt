@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.pm.runnerz.R
-import com.pm.runnerz.api_runnerz.dao.UserDao
+import com.pm.runnerz.api_runnerz.dto.UserDto
 import com.pm.runnerz.api_runnerz.retrofit.ServiceBuilder
 import com.pm.runnerz.api_runnerz.runz.UsersApi
 import com.pm.runnerz.utils.Utils.Companion.hideKeyboard
@@ -42,7 +42,7 @@ class LoginFragment : Fragment() {
             Toast.makeText(
                 requireContext(),
                 getString(R.string.fill_user_password),
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
         } else {
             signinRun(view)
@@ -56,27 +56,27 @@ class LoginFragment : Fragment() {
         llProgressBar.bringToFront()
         llProgressBar.visibility = View.VISIBLE
 
-        call.enqueue(object : Callback<UserDao> {
-            override fun onResponse(call: Call<UserDao>, response: Response<UserDao>) {
+        call.enqueue(object : Callback<UserDto> {
+            override fun onResponse(call: Call<UserDto>, response: Response<UserDto>) {
 
                 llProgressBar.visibility = View.GONE
 
                 if (response.isSuccessful) {
-                    val userDao: UserDao = response.body()!!
+                    val userDto: UserDto = response.body()!!
 
-                    if (userDao.status == "OK") {
-                        setUserSettings(userDao)
+                    if (userDto.status == "OK") {
+                        setUserSettings(userDto)
                         findNavController().navigate(R.id.action_loginFragment_to_runListFragment)
                         Toast.makeText(
                             requireContext(),
-                            getString(R.string.welcome) + " " + userDao.user.first().name,
-                            Toast.LENGTH_LONG
+                            getString(R.string.welcome) + " " + userDto.user.first().name,
+                            Toast.LENGTH_SHORT
                         ).show()
                     } else {
                         Toast.makeText(
                             requireContext(),
                             getString(R.string.wrong_username_password),
-                            Toast.LENGTH_LONG
+                            Toast.LENGTH_SHORT
                         ).show()
                     }
                 } else {
@@ -84,18 +84,18 @@ class LoginFragment : Fragment() {
                 }
             }
 
-            override fun onFailure(call: Call<UserDao>, t: Throwable) {
+            override fun onFailure(call: Call<UserDto>, t: Throwable) {
                 llProgressBar.visibility = View.GONE
                 somethingWentWrong()
             }
         })
     }
 
-    fun setUserSettings(userDao: UserDao) {
+    fun setUserSettings(userDto: UserDto) {
         val preferences = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
-        preferences.edit().putString("token", userDao.token).apply()
-        preferences.edit().putString("user_id", userDao.user.first().id.toString()).apply()
-        preferences.edit().putString("user_name", userDao.user.first().name).apply()
+        preferences.edit().putString("token", userDto.token).apply()
+        preferences.edit().putString("user_id", userDto.user.first().id.toString()).apply()
+        preferences.edit().putString("user_name", userDto.user.first().name).apply()
     }
 
 }

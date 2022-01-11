@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.pm.runnerz.R
-import com.pm.runnerz.api_runnerz.dao.RunDao
+import com.pm.runnerz.api_runnerz.dto.RunDto
 import com.pm.runnerz.api_runnerz.retrofit.ServiceBuilder
 import com.pm.runnerz.api_runnerz.runz.RunApi
 import com.pm.runnerz.utils.Utils.Companion.getToken
@@ -52,7 +52,8 @@ class AddRunFragment : Fragment() {
         if (TextUtils.isEmpty(addRunName.text.toString())
             || TextUtils.isEmpty(addRunData.text.toString())
             || TextUtils.isEmpty(addRunDuration.text.toString())
-            || TextUtils.isEmpty(addRunKms.text.toString())) {
+            || TextUtils.isEmpty(addRunKms.text.toString())
+        ) {
 
             Toast.makeText(
                 requireContext(),
@@ -74,12 +75,12 @@ class AddRunFragment : Fragment() {
                 kms_corrida = addRunKms.text.toString()
             )
 
-            call.enqueue(object : Callback<RunDao> {
-                override fun onResponse(call: Call<RunDao>, response: Response<RunDao>) {
+            call.enqueue(object : Callback<RunDto> {
+                override fun onResponse(call: Call<RunDto>, response: Response<RunDto>) {
                     llProgressBar.visibility = View.GONE
 
                     if (response.isSuccessful) {
-                        val run: RunDao = response.body()!!
+                        val run: RunDto = response.body()!!
 
                         if (run.status == "OK") {
                             Toast.makeText(
@@ -109,7 +110,7 @@ class AddRunFragment : Fragment() {
                     }
                 }
 
-                override fun onFailure(call: Call<RunDao>, t: Throwable) {
+                override fun onFailure(call: Call<RunDto>, t: Throwable) {
                     llProgressBar.visibility = View.GONE
                     somethingWentWrong()
                 }

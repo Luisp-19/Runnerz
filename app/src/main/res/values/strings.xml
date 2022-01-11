@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Runnerz</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="empty_run">Nothing to add</string>
     <string name="succes_add_run">Run saved</string>
