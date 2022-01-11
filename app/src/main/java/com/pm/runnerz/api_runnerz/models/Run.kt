@@ -6,10 +6,10 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Run(
     val id: Int,
-    val name: String,
-    val data: String,
-    val duration: String,
-    val kms: String,
-    val users_id: Int,
+    val name_corrida: String,
+    val data_corrida: String,
+    val duration_corrida: String,
+    val kms_corrida: String,
+    val users_id: String,
     val user_name: String
 ) : Parcelable

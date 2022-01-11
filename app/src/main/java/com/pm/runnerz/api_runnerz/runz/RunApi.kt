@@ -7,17 +7,18 @@ import retrofit2.http.*
 
 interface RunApi {
     @GET("runnerz/read")
-    fun getRunz(@Header("Authorization") token: String): Call<List<Run>>
+    fun getRunz(@Header("Authorization")
+                token: String): Call<List<Run>>
 
     @FormUrlEncoded
     @POST("runnerz/create")
     fun createRun(
         @Header("Authorization") token: String,
         @Field("users_id") users_id: String?,
-        @Field("name") name: String,
-        @Field("data") data: String,
-        @Field("duration") duration: String,
-        @Field("kms") kms: String
+        @Field("name_corrida") name_corrida: String,
+        @Field("data_corrida") data_corrida: String,
+        @Field("duration_corrida") duration_corrida: String,
+        @Field("kms_corrida") kms_corrida: String
     ): Call<RunDao>
 
     @FormUrlEncoded
@@ -25,10 +26,10 @@ interface RunApi {
     fun updateRun(
         @Header("Authorization") token: String,
         @Field("id") id: Int,
-        @Field("name") name: String,
-        @Field("data") data: String,
-        @Field("duration") duration: String,
-        @Field("kms") kms: String
+        @Field("name_corrida") name_corrida: String,
+        @Field("data_corrida") data_corrida: String,
+        @Field("duration_corrida") duration_corrida: String,
+        @Field("kms_corrida") kms_corrida: String
     ): Call<RunDao>
 
     @FormUrlEncoded

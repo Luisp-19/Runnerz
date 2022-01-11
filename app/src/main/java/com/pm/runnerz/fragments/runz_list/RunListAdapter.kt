@@ -34,10 +34,10 @@ class RunListAdapter(userIdInSession: String?) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = runsList[position]
-        holder.itemView.runs_list_name.text = currentItem.name
-        holder.itemView.runs_list_data.text = currentItem.data
-        holder.itemView.runs_list_duration.text = currentItem.duration
-        holder.itemView.runs_list_kms.text = currentItem.kms
+        holder.itemView.runs_list_name.text = currentItem.name_corrida
+        holder.itemView.runs_list_data.text = currentItem.data_corrida
+        holder.itemView.runs_list_duration.text = currentItem.duration_corrida
+        holder.itemView.runs_list_kms.text = currentItem.kms_corrida
         holder.itemView.runs_list_createdby.text = currentItem.user_name
 
         if (position % 2 == 0) {

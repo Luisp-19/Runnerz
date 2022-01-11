@@ -68,10 +68,10 @@ class AddRunFragment : Fragment() {
             val call = run.createRun(
                 token = "Bearer ${getToken()}",
                 users_id = getUserIdInSession(),
-                name = addRunName.text.toString(),
-                data = addRunData.text.toString(),
-                duration = addRunDuration.text.toString(),
-                kms = addRunKms.text.toString()
+                name_corrida = addRunName.text.toString(),
+                data_corrida = addRunData.text.toString(),
+                duration_corrida = addRunDuration.text.toString(),
+                kms_corrida = addRunKms.text.toString()
             )
 
             call.enqueue(object : Callback<RunDao> {

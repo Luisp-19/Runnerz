@@ -52,12 +52,12 @@ class AddFragment : Fragment() {
                 getString(R.string.empty_run),
                 Toast.LENGTH_LONG
             ).show()
-        } /*else{
+        } else{
             Toast.makeText(requireContext(),
                 getString(R.string.running_check),
             Toast.LENGTH_LONG
             ).show()
-        }*/
+        }
 
         val addRunning = Running(
             0,
