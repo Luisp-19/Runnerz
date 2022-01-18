@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pm.runnerz.R
@@ -49,14 +50,21 @@ class ListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if (item.itemId == R.id.menu_login) {
-            openlogin()
+            openLogin()
+        }
+
+        if (item.itemId == R.id.menu_maps){
+            openMaps()
         }
 
         return super.onOptionsItemSelected(item)
     }
 
-    private fun openlogin() {
-        findNavController().navigate(R.id.action_listFragment_to_loginFragment)
+    private  fun openMaps(){
+        findNavController().navigate(R.id.action_listFragment_to_maps)
     }
 
+    private fun openLogin() {
+        findNavController().navigate(R.id.action_listFragment_to_loginFragment)
+    }
 }

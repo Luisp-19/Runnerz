@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_listFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_maps"
+            app:destination="@id/maps" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -83,7 +86,7 @@
     <fragment
         android:id="@+id/updateRunFragment"
         android:name="com.pm.runnerz.fragments.update_run.UpdateRunFragment"
-        android:label="fragment_update_run"
+        android:label="Change Run"
         tools:layout="@layout/fragment_update_run">
         <action
             android:id="@+id/action_updateRunFragment_to_loginFragment"
@@ -95,5 +98,9 @@
             android:name="currentRunAPI"
             app:argType="com.pm.runnerz.api_runnerz.models.Run" />
     </fragment>
+    <activity
+        android:id="@+id/maps"
+        android:name="com.pm.runnerz.maps.Maps"
+        android:label="Maps" />
 
 </navigation>
